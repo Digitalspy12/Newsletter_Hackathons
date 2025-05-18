@@ -1,0 +1,169 @@
+/* Terminal/Hacker Style CSS - Enhanced for better visibility */
+
+/* Terminal window styling */
+.terminal-window {
+  background-color: #0a0e14 !important; /* Darker background */
+  border: 1px solid #1a2b3c;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 255, 0, 0.1);
+  position: relative;
+}
+
+/* Terminal header with circles */
+.terminal-header {
+  background-color: #0f1419 !important; /* Darker header */
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2a3a4a;
+}
+
+/* Terminal circles */
+.terminal-circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.terminal-circle.red {
+  background-color: #ff5f56;
+}
+
+.terminal-circle.yellow {
+  background-color: #ffbd2e;
+}
+
+.terminal-circle.green {
+  background-color: #27c93f;
+}
+
+/* Text styling for better visibility */
+.terminal-text, 
+.card .text-green-300, 
+.card .text-green-400,
+.text-green-300,
+.text-green-400 {
+  color: #5fff87 !important; /* Brighter green for better visibility */
+  text-shadow: 0 0 5px rgba(95, 255, 135, 0.4);
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Enhance all text visibility */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  color: #5fff87 !important;
+}
+
+/* Glitch text effect for headings */
+.glitch-text {
+  color: #5fff87 !important;
+  text-shadow: 
+    0 0 5px rgba(95, 255, 135, 0.7),
+    0 0 10px rgba(95, 255, 135, 0.5);
+  position: relative;
+}
+
+/* Terminal cursor effect */
+.terminal-cursor::after {
+  content: "_";
+  animation: cursor 1s infinite step-start;
+}
+
+@keyframes cursor {
+  50% { opacity: 0; }
+}
+
+/* Typing animation */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #5fff87;
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #5fff87 }
+}
+
+/* Card content styling */
+.card, .card-content {
+  background-color: #0a0e14 !important;
+  color: #5fff87 !important;
+  border: 1px solid #1a2b3c !important;
+}
+
+/* Override any bright backgrounds */
+.bg-popover, 
+.bg-card,
+.bg-background,
+.bg-gray-800,
+.bg-white,
+.bg-gray-100,
+.bg-gray-200 {
+  background-color: #0a0e14 !important;
+}
+
+/* Override text colors for better visibility */
+.text-popover-foreground,
+.text-card-foreground,
+.text-foreground,
+.text-gray-700,
+.text-gray-800,
+.text-gray-900 {
+  color: #5fff87 !important;
+}
+
+/* Add a subtle scan line effect */
+.terminal-window::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.15;
+}
+
+/* Add a subtle glow effect on hover */
+.terminal-window:hover {
+  box-shadow: 0 0 15px rgba(95, 255, 135, 0.5);
+}
+
+/* Force dark background on body */
+body {
+  background-color: #0a0e14 !important;
+  color: #5fff87 !important;
+}
+
+/* Improve contrast for any buttons */
+button, .btn, a {
+  color: #5fff87 !important;
+  text-shadow: 0 0 3px rgba(95, 255, 135, 0.5);
+}
+
+/* Add a matrix-like animation to the background */
+@keyframes matrix-fall {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(1000%); opacity: 0; }
+}
+
+/* Improve visibility of form inputs */
+input, textarea, select {
+  background-color: #0f1419 !important;
+  color: #5fff87 !important;
+  border: 1px solid #1a2b3c !important;
+}
